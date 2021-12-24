@@ -1,0 +1,213 @@
+/*reset*/
+body,div,table,tr,td,th,h1,h2,h3,h4,h5,h6,form,input,select,textarea,p,ul,ol,li,dl,dd,dt,img{ margin:0; padding:0;}
+img{ border:0 none; vertical-align:middle;}
+li{ list-style:none;}
+a,a:hover{ text-decoration:none;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight: normal;}
+em,i,dfn{ font-style:normal;}
+table{ border-collapse:collapse; border-spacing:0;}
+a, input, select, textarea, button, area{ outline:none; font-family:inherit; font-size: inherit; color:inherit;}
+textarea{ overflow:auto; resize:none;}
+/*解决iphone手机点击背景问题*/
+html,body{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{ line-height: 1; text-align:center; color: #000; word-break: break-all; overflow-x: hidden; font-size: 0.28rem; font-family: Arial, Helvetica, sans-serif !important;}
+
+.g-wrap{ position: relative; width: 7.5rem; margin: 0 auto; font-size: 0.28rem; overflow: hidden;}
+
+
+/*text*/
+.f-tr{ text-align:right;}
+.f-tl{ text-align:left;}
+.f-tc{ text-align:center;}
+.f-ft20{ font-size: 0.2rem;}
+.f-ft24{ font-size: 0.24rem;}
+.f-ft26{ font-size: 0.26rem;}
+.f-ft30{ font-size: 0.3rem;}
+.f-ft32{ font-size: 0.32rem;}
+.f-ft34{ font-size: 0.34rem;}
+.f-ft36{ font-size: 0.36rem;}
+.f-ft38{ font-size: 0.38rem;}
+.f-ft40{ font-size: 0.4rem;}
+.f-ft42{ font-size: 0.42rem;}
+.f-ft44{ font-size: 0.44rem;}
+.f-ft46{ font-size: 0.46rem;}
+.f-ft50{ font-size: 0.5rem;}
+.f-ft60{ font-size: 0.6rem;}
+.f-tdu{ text-decoration:underline;}
+.f-fwb{ font-weight:bold;}
+.f-fwn{ font-weight:normal;}
+.f-wsn{ white-space:nowrap;}
+
+/*color*/
+.f-c-w{ color:white;}
+.f-c-r{ color:#ef6b6b;}
+.f-c-g{ color:green;}
+.f-c-b{ color:#418CB3;}
+
+.f-c-3{ color:#333;}
+.f-c-6{ color:#666;}
+.f-c-9{ color:#999;}
+.f-c-c{ color:#ccc;}
+
+/* 灰度 */
+.f-fg{ -webkit-filter: grayscale(100%); filter: grayscale(100%);}
+
+/*layout*/
+.f-w{ width:100%;}
+.f-h{ height:100%;}
+.f-df{ display: flex;}
+.f-fl{ float:left;}
+.f-fr{ float:right;}
+.f-pr{ position:relative;}
+.f-pa{ position:absolute;}
+.f-dn,
+[v-cloak]{ display:none;}
+.f-db{ display:block;}
+.f-dib{ display:inline-block;}
+.f-oh{ overflow:hidden;}
+.f-vam{ vertical-align:middle;}
+.f-vat{ vertical-align:top;}
+.f-vab{ vertical-align:bottom;}
+.f-auto{ margin-left: auto; margin-right: auto;}
+.f-dfv{ display: flex; align-items: center;}
+.f-dfvh{ display: flex; align-items: center; justify-content: center;}
+.f-dfvb,
+.f-dfvbw{ display: flex; align-items: center; justify-content: space-between;}
+.f-dfvbw{ flex-wrap: wrap;}
+
+.f-pac{ position: absolute; left: 0; right: 0; margin: auto;}
+
+/* padding */
+.f-p10{ padding: 0.1rem;}
+.f-p20{ padding: 0.2rem;}
+.f-p30{ padding: 0.3rem;}
+.f-p40{ padding: 0.4rem;}
+.f-p60{ padding: 0.6rem;}
+.f-p100{ padding: 1rem;}
+.f-pt10{ padding-top: 0.1rem;}
+.f-pt20{ padding-top: 0.2rem;}
+.f-pt30{ padding-top: 0.3rem;}
+.f-pt40{ padding-top: 0.4rem;}
+.f-pt50{ padding-top: 0.5rem;}
+.f-pt60{ padding-top: 0.6rem;}
+.f-pr10{ padding-right: 0.1rem;}
+.f-pr20{ padding-right: 0.2rem;}
+.f-pr30{ padding-right: 0.3rem;}
+.f-pr40{ padding-right: 0.4rem;}
+.f-pl-10{ padding-left: 0.1rem;}
+.f-pl-20{ padding-left: 0.2rem;}
+.f-pl-30{ padding-left: 0.3rem;}
+.f-pl-40{ padding-left: 0.4rem;}
+.f-pl-50{ padding-left: 0.5rem;}
+.f-pb10{ padding-bottom: 0.1rem;}
+.f-pb20{ padding-bottom: 0.2rem;}
+.f-pb30{ padding-bottom: 0.3rem;}
+.f-pb40{ padding-bottom: 0.4rem;}
+.f-pb50{ padding-bottom: 0.5rem;}
+.f-pb60{ padding-bottom: 0.6rem;}
+.f-ml-10{ margin-left: 0.1rem;}
+.f-ml-20{ margin-left: 0.2rem;}
+.f-ml-30{ margin-left: 0.3rem;}
+.f-mr10{ margin-right: 0.1rem;}
+.f-mr20{ margin-right: 0.2rem;}
+.f-mr30{ margin-right: 0.3rem;}
+.f-mr40{ margin-right: 0.4rem;}
+.f-mr50{ margin-right: 0.5rem;}
+.f-mt10{ margin-top: 0.1rem;}
+.f-mt20{ margin-top: 0.2rem;}
+.f-mt30{ margin-top: 0.3rem;}
+.f-mt40{ margin-top: 0.4rem;}
+.f-mt50{ margin-top: 0.5rem;}
+.f-mt60{ margin-top: 0.6rem;}
+.f-mt50{ margin-top: 0.5rem;}
+.f-mb10{ margin-bottom: 0.1rem;}
+.f-mb20{ margin-bottom: 0.2rem;}
+.f-mb30{ margin-bottom: 0.3rem;}
+.f-mb40{ margin-bottom: 0.4rem;}
+.f-mb50{ margin-bottom: 0.5rem;}
+.f-mb60{ margin-bottom: 0.6rem;}
+
+
+/* 最多显示n行，超出显示省略号 */
+.f-line,
+.f-line2, 
+.f-line3 { display:-webkit-box; -webkit-line-clamp: 1; -webkit-box-orient:vertical; text-overflow:ellipsis; overflow:hidden;}
+.f-line2 { -webkit-line-clamp: 2;}
+.f-line3 { -webkit-line-clamp: 3;}
+
+.f-active{ transform: scale(.95); -webkit-transform: scale(.95);}
+
+
+
+/* loading */
+.f-loading { position:fixed; left:0; top:0; width:100%; height:100%; z-index: 1000000; transition: all 0.5s;}
+.f-loading .info { min-width: 50px; height: 50px; padding: 0 12px; box-sizing:border-box; background:rgba(0,0,0,.6);border-radius:6px; text-align:center; white-space:nowrap; color:#fff;}
+.f-loading i { display:block; height:20px; width:20px; border-radius:50%; border:2px solid #fff; border-bottom-color: transparent; animation: a-rotate 0.75s linear infinite;}
+.f-loading .info p { padding:0 0 0 10px;}
+
+/* 消息提示框 */
+.f-toast{ position:fixed; left:0; top: 45%; right: 0; width: 7.5rem; margin: auto; z-index: 1000000; text-align: center; animation: a-fadeIn 0.5s;}
+.f-toast p{ display: inline-block; max-width: 80%; background: rgba(0,0,0,.8); color: #fff; font-size: 0.28rem; padding: .2rem .3rem; line-height: 1.4; border-radius: 3px;}
+
+
+/* 弹窗 */
+.m-popup{ position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, .8); z-index: 99;}
+.m-popup .cont{ position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 7.5rem; margin: auto;}
+.m-popup .inner{ position: relative; box-sizing: border-box;}
+
+/* 非金管家打开提示 */
+.m-notSupport{ position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: #000; color: #fff; z-index: 9999;}
+.m-notSupport p{ padding-top: 2rem;}
+
+
+/* ***********动画********** */
+.a-pulse{ animation: a-pulse 0.6s both; }
+.a-fadeIn{ animation: a-fadeIn 0.6s both; }
+
+/* 淡入 */
+@keyframes a-fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* 旋转 */
+@keyframes a-rotate {
+  100% { transform:rotate(360deg);}
+}
+
+/* 弹性 */
+@keyframes a-pulse {
+  0% { transform: scale(0); }
+  40% { transform: scale(1.03); }
+  60% { transform: scale(0.95);}
+}
+
+/* 翻牌动画 */
+.a-flip{ animation: a-flip 1s both;}
+@keyframes a-flip {
+  0% { transform: perspective(400px) rotateY(180deg) scale(0); }
+  0%, 50% { animation-timing-function: ease-in }
+  50% { transform: perspective(400px) rotateY(-16deg) }
+  67% { transform: perspective(400px) rotateY(8deg); }
+  84% { transform: perspective(400px) rotateY(-5deg) }
+  to { transform: perspective(400px) }
+}
+
+
+/* 入场 */
+@keyframes a-entry{
+  100%{ opacity: 1; transform: none;}
+}
+
+/* 离场 */
+@keyframes a-leave{
+  100%{ opacity: 0; transform: translate(0,0) scale(0);}
+}
+
+/* 循环 */
+@keyframes a-loop{
+  50%{ opacity: 1; transform: none;}
+}
