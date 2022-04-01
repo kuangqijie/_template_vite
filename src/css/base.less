@@ -78,7 +78,13 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-dfvbw{ display: flex; align-items: center; justify-content: space-between;}
 .f-dfvbw{ flex-wrap: wrap;}
 
-.f-pac{ position: absolute; left: 0; right: 0; margin: auto;}
+.f-pac,
+.f-pact,
+.f-pacb
+.f-pach{ position: absolute; left: 0; right: 0; margin: auto;}
+.f-pact{ top: 0;}
+.f-pacb{ bottom: 0;}
+.f-pach{ top: 0; bottom: 0;}
 
 /* padding */
 .f-p10{ padding: 0.1rem;}
@@ -210,4 +216,18 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 /* 循环 */
 @keyframes a-loop{
   50%{ opacity: 1; transform: none;}
+}
+
+/* 滑入 */
+@keyframes a-hr {
+  0% { transform: translate(0, -0.4rem); }
+  100% { transform: translate(0, 0); }
+}
+
+// 摇晃
+@keyframes a-shake {
+  4% { transform:rotate(-6deg);}
+  8% { transform:rotate(6deg);}
+  12% { transform:rotate(-6deg);}
+  16% { transform:rotate(0deg);}
 }
