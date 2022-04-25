@@ -13,7 +13,7 @@ html,body{
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body{ line-height: 1; text-align:center; color: #000; word-break: break-all; overflow-x: hidden; font-size: 0.28rem; font-family: Arial, Helvetica, sans-serif !important;}
+body{ line-height: 1; text-align:center; color: #000; word-break: break-all; overflow-x: hidden; font-size: 0.28rem;}
 
 .g-wrap{ position: relative; width: 7.5rem; margin: 0 auto; font-size: 0.28rem; overflow: hidden;}
 
@@ -22,7 +22,6 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-tr{ text-align:right;}
 .f-tl{ text-align:left;}
 .f-tc{ text-align:center;}
-.f-ft20{ font-size: 0.2rem;}
 .f-ft24{ font-size: 0.24rem;}
 .f-ft26{ font-size: 0.26rem;}
 .f-ft30{ font-size: 0.3rem;}
@@ -45,14 +44,13 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-c-w{ color:white;}
 .f-c-r{ color:#ef6b6b;}
 .f-c-g{ color:green;}
-.f-c-b{ color:#418CB3;}
+.f-c-b{ color:#289de7;}
 
 .f-c-3{ color:#333;}
 .f-c-6{ color:#666;}
 .f-c-9{ color:#999;}
 .f-c-c{ color:#ccc;}
 
-/* 灰度 */
 .f-fg{ -webkit-filter: grayscale(100%); filter: grayscale(100%);}
 
 /*layout*/
@@ -85,6 +83,7 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-pact{ top: 0;}
 .f-pacb{ bottom: 0;}
 .f-pach{ top: 0; bottom: 0;}
+
 
 /* padding */
 .f-p10{ padding: 0.1rem;}
@@ -126,7 +125,6 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-mt20{ margin-top: 0.2rem;}
 .f-mt30{ margin-top: 0.3rem;}
 .f-mt40{ margin-top: 0.4rem;}
-.f-mt50{ margin-top: 0.5rem;}
 .f-mt60{ margin-top: 0.6rem;}
 .f-mt50{ margin-top: 0.5rem;}
 .f-mb10{ margin-bottom: 0.1rem;}
@@ -134,7 +132,6 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-mb30{ margin-bottom: 0.3rem;}
 .f-mb40{ margin-bottom: 0.4rem;}
 .f-mb50{ margin-bottom: 0.5rem;}
-.f-mb60{ margin-bottom: 0.6rem;}
 
 
 /* 最多显示n行，超出显示省略号 */
@@ -146,6 +143,8 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 
 .f-active{ transform: scale(.95); -webkit-transform: scale(.95);}
 
+/* 授权遮罩 */
+.f-authMask{ top: 0; bottom: 0; position: fixed; }
 
 
 /* loading */
@@ -155,7 +154,7 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-loading .info p { padding:0 0 0 10px;}
 
 /* 消息提示框 */
-.f-toast{ position:fixed; left:0; top: 45%; right: 0; width: 7.5rem; margin: auto; z-index: 1000000; text-align: center; animation: a-fadeIn 0.5s;}
+.f-toast{ position:fixed; left:0; top: 45%; right: 0; width: 7.5rem; margin: auto; z-index: 1000000; text-align: center; animation: a-fadeIn 0.5s both;}
 .f-toast p{ display: inline-block; max-width: 80%; background: rgba(0,0,0,.8); color: #fff; font-size: 0.28rem; padding: .2rem .3rem; line-height: 1.4; border-radius: 3px;}
 
 
@@ -172,6 +171,8 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 /* ***********动画********** */
 .a-pulse{ animation: a-pulse 0.6s both; }
 .a-fadeIn{ animation: a-fadeIn 0.6s both; }
+.a-hr{ animation: a-hr 0.8s both;}
+.a-shake{ animation: a-shake 3.2s linear infinite;}
 
 /* 淡入 */
 @keyframes a-fadeIn {
