@@ -75,3 +75,10 @@ function playAudio(audio, b) {
     audio[0].pause();
   }
 }
+
+// 微信音频自动播放
+function wxInitAudio(audio) {
+  audio.play();
+  document.addEventListener('WeixinJSBridgeReady', wxInitAudio, false);
+  document.addEventListener('YixinJSBridgeReady', wxInitAudio, false);
+}
