@@ -1,5 +1,6 @@
 /*reset*/
-body,div,table,tr,td,th,h1,h2,h3,h4,h5,h6,form,input,select,textarea,p,ul,ol,li,dl,dd,dt,img{ margin:0; padding:0;}
+html,body,div,table,tr,td,th,h1,h2,h3,h4,h5,h6,form,input,select,textarea,p,ul,ol,li,dl,dd,dt,img{ margin:0; padding:0;}
+html,body,div,p,span,i,b,em,ul,li,input,img{ box-sizing: border-box;}
 img{ border:0 none; vertical-align:middle;}
 li{ list-style:none;}
 a,a:hover{ text-decoration:none;}
@@ -88,6 +89,8 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-pact{ top: 0;}
 .f-pacb{ bottom: 0;}
 .f-pach{ top: 0; bottom: 0;}
+.f-pazs{ position: absolute; left: 0; top: 0;}
+.f-pays{ position: absolute; right: 0; top: 0;}
 
 
 /* padding */
@@ -149,7 +152,7 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-active{ transform: scale(.98);}
 
 /* 授权遮罩 */
-.f-authMask{ top: 0; bottom: 0; position: fixed; }
+.f-authMask{ top: 0; bottom: 0; position: fixed; z-index: 100;}
 
 
 /* loading */
@@ -164,13 +167,14 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 
 
 /* 弹窗 */
-.m-popup{ position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, .8); z-index: 99;}
+.m-popup{ position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, .7); z-index: 99;}
 .m-popup .cont{ position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 7.5rem; margin: auto;}
 .m-popup .inner{ position: relative; box-sizing: border-box;}
 
 /* 非金管家打开提示 */
 .m-notSupport{ position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: #000; color: #fff; z-index: 9999;}
 .m-notSupport p{ padding-top: 2rem;}
+
 
 #__vconsole{
   position: absolute;
