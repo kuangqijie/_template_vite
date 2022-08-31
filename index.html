@@ -8,7 +8,22 @@
   <script>
     (function (w) { s(); var e = ("onorientationchange" in w) ? "orientationchange" : "resize"; w.addEventListener(e, function () { setTimeout(s, 200) }, false); function s() { var b = w.innerWidth / 750 * 100; if (b > 100) { b = 100 } document.querySelector("html").style.fontSize = b + "px" } })(window);
   </script>
-  <link href="/css/animate.min.css" rel="stylesheet">
+  <script>
+    (function (w, d, s, q, i) {
+      w[q] = w[q] || [];
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+      j.async = true;
+      j.id = 'beacon-aplus';
+      j.src = 'https://d.alicdn.com/alilog/mlog/aplus/' + i + '.js';
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'aplus_queue', '203467608');
+
+    //集成应用的appKey
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['appKey', '630d7f6688ccdf4b7e18632d']
+    });
+  </script>
   <link href="/css/swiper.min.css" rel="stylesheet">
 </head>
 
@@ -16,17 +31,12 @@
 
   <div id="app"></div>
 
-
   <script>
     document.write(`<script src="./js/version.js?v=${Math.random()}"><\/script>`)
   </script>
   <script src="/js/vconsole.min.js"></script>
   <script src="/js/jquery.min.js"></script>
-  <script src="/js/jquery.url.js"></script>
   <script src="/js/swiper.min.js"></script>
-  <script src="//res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-  <script src="/js/wxShare.js"></script>
-  <script src="/js/common.js"></script>
 
   <script type="module" src="/src/main.js"></script>
 </body>

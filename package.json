@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "h5",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,6 +7,9 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "moment": "^2.29.4",
+    "urljs": "^2.7.0",
     "vue": "^3.2.16"
   },
   "devDependencies": {

@@ -29,6 +29,7 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-ft22{ font-size: 0.22rem;}
 .f-ft24{ font-size: 0.24rem;}
 .f-ft26{ font-size: 0.26rem;}
+.f-ft28{ font-size: 0.28rem;}
 .f-ft30{ font-size: 0.3rem;}
 .f-ft32{ font-size: 0.32rem;}
 .f-ft34{ font-size: 0.34rem;}
@@ -77,10 +78,14 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-auto{ margin-left: auto; margin-right: auto;}
 .f-dfv{ display: flex; align-items: center;}
 .f-dfh{ display: flex; justify-content: center;}
-.f-dfvh{ display: flex; align-items: center; justify-content: center;}
+.f-dfvh,
+.f-dfvhw{ display: flex; align-items: center; justify-content: center;}
 .f-dfvb,
 .f-dfvbw{ display: flex; align-items: center; justify-content: space-between;}
-.f-dfvbw{ flex-wrap: wrap;}
+.f-dfvbw, 
+.f-dfvhw{ flex-wrap: wrap;}
+.f-dfve{ display: flex; align-items: center; justify-content: flex-end;}
+.f-dfvs{ display: flex; align-items: center; justify-content: flex-start;}
 
 .f-pac,
 .f-pact,
@@ -151,8 +156,7 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 
 .f-active{ transform: scale(.98);}
 
-/* 授权遮罩 */
-.f-authMask{ top: 0; bottom: 0; position: fixed; z-index: 100;}
+
 
 
 /* loading */
@@ -165,11 +169,6 @@ body{ line-height: 1; text-align:center; color: #000; word-break: break-all; ove
 .f-toast{ position:fixed; left:0; top: 45%; right: 0; width: 7.5rem; margin: auto; z-index: 1000000; text-align: center; animation: a-fadeIn 0.5s both;}
 .f-toast p{ display: inline-block; max-width: 80%; background: rgba(0,0,0,.8); color: #fff; font-size: 0.28rem; padding: .2rem .3rem; line-height: 1.4; border-radius: 3px;}
 
-
-/* 弹窗 */
-.m-popup{ position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, .7); z-index: 99;}
-.m-popup .cont{ position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 7.5rem; margin: auto;}
-.m-popup .inner{ position: relative; box-sizing: border-box;}
 
 /* 非金管家打开提示 */
 .m-notSupport{ position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: #000; color: #fff; z-index: 9999;}
