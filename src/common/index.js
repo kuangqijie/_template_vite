@@ -3,7 +3,7 @@
  */
 
 import { queryString } from 'urljs';
-import { ossUrl } from '../config/index.js';
+import { actLink, localStoragePrefix } from '../config/index.js';
 
 export const isDev = location.host.indexOf('192') === 0;
 
@@ -97,4 +97,23 @@ export function delay(t = 10) {
   })
 }
 
+// 跳转微信授权获取code
+export function goWxAuth() {
+  let param = queryString('test') == 1 ? '?test=1' : '';
+  let back_url = encodeURIComponent(actLink + param);
+  let paAppid = 'wx5ccd3fb318c8cbe6';
+  let oauthUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize';
 
+  let code = queryString("code");
+
+  location.replace(`${oauthUrl}?appid=${paAppid}&redirect_uri=${back_url}&response_type=code&scope=snsapi_userinfo&state=step1&component_appid=wxfc54817af0b94bb6#wechat_redirect`)
+}
+
+// 获取/设置localStorage 带活动标识前缀
+export function getLocalStorage(key) {
+  return localStorage[localStoragePrefix + key] || '';
+}
+
+export function setLocalStorage(key, value) {
+  return localStorage[localStoragePrefix + key] = value;
+}

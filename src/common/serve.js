@@ -1,6 +1,7 @@
 import { ajax } from '../common/axios.js';
 import { isIOS } from '../common/index.js';
-import { actData, popZj, isShowPop } from '../store/index.js';
+import { actData } from '../store/index.js';
+import { setLocalStorage } from '../common/index.js';
 
 // 获取用户信息
 export async function getUserInfo() {
@@ -9,7 +10,23 @@ export async function getUserInfo() {
     url: 'UserInfo',
   }).then(data => {
     hideLoading();
-    window.uuid = data.uuid;
+    setLocalStorage('uuid', data.uuid);
+    Object.assign(actData, data);
+  })
+}
+
+// 获取微信用户openid
+// code：微信跳转授权后取到的code
+export function getOpenId(code) {
+  showLoading();
+  return ajax({
+    url: 'CodeUserInfo',
+    data: {
+      code,
+    },
+  }).then(data => {
+    hideLoading();
+    setLocalStorage('uuid', data.uuid);
     Object.assign(actData, data);
   })
 }

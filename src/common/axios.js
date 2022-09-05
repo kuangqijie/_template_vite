@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { actData } from '../store/index.js';
 import { baseURL } from '../config/index.js';
+import { getLocalStorage } from './index.js';
 
 const instance = axios.create({
   // baseURL,  //会在末尾追加斜杠，暂且不用
@@ -44,7 +45,7 @@ export function ajax(options) {
       url: baseURL + options.url,
 
       data: {
-        ...Object.assign({ uuid: actData.uuid || localStorage.sc_pads_uuid }, options.data)
+        ...Object.assign({ uuid: actData.uuid || getLocalStorage('uuid') }, options.data)
       },
     }).then(res => {
       // console.log(options.url, res);
