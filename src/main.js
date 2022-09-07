@@ -2,6 +2,7 @@ import './css/base.less';
 import './css/app.less';
 
 import './common/helper.js';
+import './common/track.js';
 
 import { createApp } from 'vue';
 import { queryString } from 'urljs';

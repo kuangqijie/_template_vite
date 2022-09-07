@@ -2,8 +2,6 @@
  * DOM相关全局通用方法
 */
 
-import { nextTick } from 'vue';
-
 // 消息提示
 window.showToast = function (text, duration) {
   hideToast();
@@ -29,13 +27,11 @@ window.hideLoading = function () {
 }
 
 // 按钮active
-nextTick(() => {
-  $('body').on('touchstart', '.btn, .j-act', function () {
-    var $this = $(this);
-    $this.addClass('f-active');
-    setTimeout(function () {
-      $this.removeClass('f-active');
-    }, 100)
-  })
+$('body').on('touchstart', '.btn, .j-act', function () {
+  var $this = $(this);
+  $this.addClass('f-active');
+  setTimeout(function () {
+    $this.removeClass('f-active');
+  }, 100)
 })
 
