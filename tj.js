@@ -22,10 +22,13 @@ function createTjFile() {
   let arr = list.map(item => item.split('=')[1]);
   arr = arr.map(item => item.replace(/['"]/g, ''));
   arr = arr.map(item => item.replace('-', ','));
+  arr.unshift('0,首页pv');
 
-  console.log(arr);
+  let res = Array.from(new Set(arr)); //去重
 
-  fs.writeFile('./tj.txt', arr.join('\r'), function (err) {
+  console.log(res);
+
+  fs.writeFile('./tj.txt', res.join('\r'), function (err) {
     if (err) {
       console.log(err);
     }
