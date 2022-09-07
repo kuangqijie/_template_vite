@@ -23,7 +23,11 @@ const config = {
   },
   server: {
     host: '0.0.0.0',
-    port: '20827'
+    port: '20827',
+    // watch: {
+    //   interval: 1000,
+    //   binaryInterval: 1000,
+    // }
   },
   css: {
     postcss: {
