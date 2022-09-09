@@ -12,6 +12,12 @@ export async function getUserInfo() {
     hideLoading();
     setLocalStorage('uuid', data.uuid);
     Object.assign(actData, data);
+  }).catch(res => {
+    // 用户不存在
+    if (res.ret == -1010) {
+      localStorage.clear();
+      location.reload(true);
+    }
   })
 }
 
