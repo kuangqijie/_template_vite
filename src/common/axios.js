@@ -38,17 +38,31 @@ instance.interceptors.response.use(function (response) {
 // 导出ajax
 export function ajax(options) {
   return new Promise((resolve, reject) => {
-    instance({
+    const opts = {
       method: 'post',
       ...options,
+      url: options.url.startsWith('http') ? options.url : baseURL + options.url,
+    }
 
-      url: baseURL + options.url,
+    if (options.method == 'get') {
+      opts.params = { ...options.params };
+    } else {
+      opts.data = {
+        uuid: actData.uuid || getLocalStorage('uuid'),
+        ...options.data,
+      }
+    }
 
-      data: {
-        ...Object.assign({ uuid: actData.uuid || getLocalStorage('uuid') }, options.data)
-      },
-    }).then(res => {
+    // console.log(opts)
+
+    instance(opts).then(res => {
       // console.log(options.url, res);
+
+      // 微信jssdk配置信息
+      if (options.type == 'wxConfig') {
+        resolve(res);
+        return;
+      }
 
       if (res.ret == 200) {
         resolve(res.data);

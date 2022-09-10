@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "howler": "^2.2.3",
     "moment": "^2.29.4",
     "urljs": "^2.7.0",
     "vue": "^3.2.16"

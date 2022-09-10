@@ -38,7 +38,7 @@ export function createStyle(str) {
   head.appendChild(style);
 }
 
-const userAgent = navigator.userAgent;
+export const userAgent = navigator.userAgent;
 //ios终端
 export const isIOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 // 判断是否是微信
