@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { actData } from '../store/index.js';
 import { baseURL } from '../config/index.js';
-import { getLocalStorage } from './index.js';
+import { getLocalStorage, setLocalStorage } from './index.js';
 
 const instance = axios.create({
   // baseURL,  //会在末尾追加斜杠，暂且不用
@@ -37,6 +37,13 @@ instance.interceptors.response.use(function (response) {
 
 // 导出ajax
 export function ajax(options) {
+  // 生成随机id
+  // let openid = getLocalStorage('id');
+  // if (!openid) {
+  //   openid = randomString();
+  //   setLocalStorage('id', openid);
+  // }
+
   return new Promise((resolve, reject) => {
     const opts = {
       method: 'post',
