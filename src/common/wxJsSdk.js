@@ -8,7 +8,7 @@
 import { ref, watch } from 'vue';
 import { ajax } from './axios';
 import { isWeiXin, getImageUrl } from './index';
-import { supplier } from '../config';
+import { supplier, actLink } from '../config';
 
 let isConfig = false;
 let isReady = ref(false);
@@ -70,10 +70,10 @@ export async function wxShareInit(options) {
   await wxReady();
 
   const data = {
-    title: options.title, // 分享标题
+    title: options.title, // 分享标题，必填
     desc: options.desc, // 分享描述
-    link: options.link || location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致
-    imgUrl: options.imgUrl || getImageUrl('wx.jpg'), // 分享图标
+    link: options.link || actLink || location.href, // 分享链接，必填，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致
+    imgUrl: options.imgUrl || getImageUrl('wx.jpg'), // 分享图标，必填
   }
 
   // 自定义“分享给朋友”及“分享到QQ”按钮的分享内容（1.4.0）
