@@ -11,14 +11,16 @@ export const isDev = location.host.indexOf('192') === 0;
 const images = import.meta.globEager('/src/images/**/*');
 // console.log(images)
 export function getImageUrl(name) {
-  let img = images[`/src/images/${name}`];
-  if (!img) return;
-  return img.default;
+  let res = images[`/src/images/${name}`];
+  if (!res) return;
+  return res.default;
 }
 
 const mp3 = import.meta.globEager('/src/mp3/**/*');
 export function getMp3Url(name) {
-  return mp3[`/src/mp3/${name}`].default;
+  let res = mp3[`/src/mp3/${name}`];
+  if (!res) return;
+  return res.default;
 }
 
 
