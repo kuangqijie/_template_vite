@@ -12,6 +12,7 @@ import { supplier, actLink } from '../config';
 
 let isConfig = false;
 let isReady = ref(false);
+let blankImg = `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC`;
 
 // wx.config
 export async function wxConfig() {
@@ -73,7 +74,7 @@ export async function wxShareInit(options) {
     title: options.title, // 分享标题，必填
     desc: options.desc, // 分享描述
     link: options.link || actLink || location.href, // 分享链接，必填，该链接域名或路径必须与当前页面对应的公众号 JS 安全域名一致
-    imgUrl: options.imgUrl || getImageUrl('wx.jpg'), // 分享图标，必填
+    imgUrl: options.imgUrl || getImageUrl('wx.jpg') || blankImg, // 分享图标，必填
   }
 
   // 自定义“分享给朋友”及“分享到QQ”按钮的分享内容（1.4.0）
@@ -96,36 +97,33 @@ export async function wxShareInit(options) {
     }
   })
 
+  return;
+
   // 获取“分享给朋友”按钮点击状态及自定义分享内容接口（即将废弃）
-  // wx.onMenuShareAppMessage({
-  //   title: info.title,
-  //   desc: info.desc,
-  //   link: info.link,
-  //   imgUrl: info.imgUrl,
-  //   type: '',
-  //   dataUrl: '',
-  //   success: function () {
-  //     // 用户点击了分享后执行的回调函数
-  //     options.success && options.success();
-  //   },
-  //   cancel: function () {
-  //      // 用户取消分享后执行的回调函数
-  //   }
-  // });
+  wx.onMenuShareAppMessage({
+    ...data,
+    success: function () {
+      console.log('分享给朋友')
+      // 用户点击了分享后执行的回调函数
+      options.success && options.success();
+    },
+    cancel: function () {
+      // 用户取消分享后执行的回调函数
+    }
+  });
 
   // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口（即将废弃）
-  // wx.onMenuShareTimeline({
-  //   title: info.title,
-  //   link: info.link,
-  //   imgUrl: info.imgUrl,
-  //   success: function () {
-  //     // 用户点击了分享后执行的回调函数
-  //     options.success2 && options.success2();
-  //   },
-  //   cancel: function () {
-  //      // 用户取消分享后执行的回调函数
-  //   }
-  // });
+  wx.onMenuShareTimeline({
+    ...data,
+    success: function () {
+      console.log('分享到朋友圈')
+      // 用户点击了分享后执行的回调函数
+      options.success2 && options.success2();
+    },
+    cancel: function () {
+      // 用户取消分享后执行的回调函数
+    }
+  });
 }
 
 // 监听wx.ready

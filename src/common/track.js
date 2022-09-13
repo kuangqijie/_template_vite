@@ -9,18 +9,20 @@ $('body').on('touchstart', '[data-tj]', function () {
   let arr = tj.split('-');
 
   //点击埋点
-  aplus_queue.push({
-    action: "aplus.record",
-    arguments: [arr[0], "CLK", {}],
-  })
-
-  console.log('友盟埋点：', arr.join());
+  report(arr[0]);
 })
 
 // PV埋点
 if (window.aplus_queue) {
+  report('0');
+}
+
+// 自定义事件埋点
+export function report(id, params) {
+  let data = { ...params }
   aplus_queue.push({
     action: "aplus.record",
-    arguments: ['0', "CLK", {}],
+    arguments: [id, "CLK", data],
   })
+  console.log('友盟埋点：', id, data)
 }
