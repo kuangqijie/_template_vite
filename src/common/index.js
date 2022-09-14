@@ -24,6 +24,12 @@ export function getMp3Url(name) {
 }
 
 
+// 获取资源路径-绝对路径（打包解析带hash值）
+export function getAssetsUrl(name) {
+  return new URL(`../${name}`, import.meta.url).href
+}
+
+
 // 微信音频自动播放（微信已不支持）
 export function wxInitAudio(audio) {
   audio.play();
