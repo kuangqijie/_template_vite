@@ -11,13 +11,13 @@
     "howler": "^2.2.3",
     "moment": "^2.29.4",
     "urljs": "^2.7.0",
-    "vue": "^3.2.16"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@vitejs/plugin-legacy": "^1.6.2",
-    "@vitejs/plugin-vue": "^1.9.3",
+    "@vitejs/plugin-legacy": "^2.1.0",
+    "@vitejs/plugin-vue": "^3.1.0",
     "autoprefixer": "^10.3.1",
     "less": "^4.1.2",
-    "vite": "^2.6.4"
+    "vite": "^3.1.0"
   }
 }
