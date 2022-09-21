@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
 import autoprefixer from 'autoprefixer'
+import { createHtmlPlugin } from 'vite-plugin-html'
 
 const config = {
   base: './',
@@ -10,7 +11,18 @@ const config = {
     vue(),
     legacy({
       targets: ['last 2 versions']
-    })
+    }),
+    // 默认会向 index.html 注入 .env 文件的内容
+    createHtmlPlugin({
+      minify: false,
+      inject: {
+        // 注入的数据，可以在 html 中使用 ejs 模版语法获取
+        // <%- title %>
+        data: {
+          title: '测试啊'
+        }
+      }
+    }),
   ],
   resolve: {
     alias: {
