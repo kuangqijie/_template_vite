@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "build:test": "vite build --mode test"
   },
   "dependencies": {
     "axios": "^0.27.2",
