@@ -13,6 +13,7 @@ const ossUrl = 'https://shangce.top/xjdds/';
 // localStorage本地缓存数据前缀，防止项目之间本地缓存数据命名冲突
 const localStoragePrefix = 'sc_xjdds_';
 
+const MODE = import.meta.env.MODE;
 
 export {
   supplier,
@@ -20,4 +21,5 @@ export {
   actLink,
   ossUrl,
   localStoragePrefix,
+  MODE,
 }

@@ -5,23 +5,20 @@
 import { queryString } from 'urljs';
 import { actLink, localStoragePrefix } from '../config/index.js';
 
-export const isDev = location.host.indexOf('192') === 0;
-
 // 获取动态图片路径（打包解析带hash值）
-const images = import.meta.globEager('/src/images/**/*');
-// console.log(images)
-export function getImageUrl(name) {
-  let res = images[`/src/images/${name}`];
-  if (!res) return;
-  return res.default;
-}
+// const images = import.meta.globEager('/src/images/**/*');
+// export function getImageUrl(name) {
+//   let res = images[`/src/images/${name}`];
+//   if (!res) return;
+//   return res.default;
+// }
 
-const mp3 = import.meta.globEager('/src/mp3/**/*');
-export function getMp3Url(name) {
-  let res = mp3[`/src/mp3/${name}`];
-  if (!res) return;
-  return res.default;
-}
+// const mp3 = import.meta.globEager('/src/mp3/**/*');
+// export function getMp3Url(name) {
+//   let res = mp3[`/src/mp3/${name}`];
+//   if (!res) return;
+//   return res.default;
+// }
 
 
 // 获取资源路径-绝对路径（打包解析带hash值）
