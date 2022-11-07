@@ -13,6 +13,7 @@
 <style lang="less">
 // 弹窗组件
 .m-popup {
+  position: fixed;
   background: rgba(0, 0, 0, .8);
   z-index: 99;
 
